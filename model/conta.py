@@ -63,7 +63,10 @@ class Conta:
                     f'pra conta {destino._numero}\nCliente {destino._client._nome}')
                 print(f'O valor de R${valor} com sucesso!\n')
             else:
-                print("Saldo insuficiente")
+                print("O Saldo é insuficiente para transferencia")
+                print(f"Seu saldo é de R${self._saldo}")
+                input()
+                exit()
         else:
             print("Senha invalida!\n")
             input()

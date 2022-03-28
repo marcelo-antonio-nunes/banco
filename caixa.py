@@ -1,6 +1,8 @@
 # imports
 from modulos import Client, Conta, Utils, Banco
 
+utils = Utils()
+
 
 def trasferencia(lista) -> None:
     numero_origem = int(input("Numero da conta de origem: "))
@@ -19,15 +21,16 @@ def trasferencia(lista) -> None:
                                 f'Saldo de R${conta.saldo} Cliente {conta.nome}\n')
                             print(conta_destino.saldo_cliente(
                                 conta.saldo_cliente))
+                            utils.limpa_tela()
                             conta.transferir(conta_destino, valor, senha)
                             print(
                                 f'Saldo de R${conta.saldo} Cliente {conta.nome}\n')
                             print(conta_destino.saldo_cliente(
                                 conta.saldo_cliente))
+                            input()
 
 
 def main():
-    utils = Utils()
     utils.limpa_tela()
     itau = Banco()
     # cadastra o cliente
