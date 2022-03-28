@@ -57,8 +57,10 @@ class Conta:
             if self.tem_saldo(valor):
                 self._saldo -= valor
                 destino._saldo += valor
-                print(f'transferido da conta {self._numero}\nCliente {self._client._nome}')
-                print(f'pra conta {destino._numero}\nCliente {destino._client._nome}')
+                print(
+                    f'transferido da conta {self._numero}\nCliente {self._client._nome}')
+                print(
+                    f'pra conta {destino._numero}\nCliente {destino._client._nome}')
                 print(f'O valor de R${valor} com sucesso!\n')
             else:
                 print("Saldo insuficiente")

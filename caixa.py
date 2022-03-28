@@ -2,9 +2,7 @@
 from modulos import Client, Conta, Utils, Banco
 
 
-
-
-def trasferencia(lista ) -> None:
+def trasferencia(lista) -> None:
     numero_origem = int(input("Numero da conta de origem: "))
     for conta in lista:
         if conta.numero == numero_origem:
@@ -17,13 +15,16 @@ def trasferencia(lista ) -> None:
                     conta_destino = conta
                     for conta in lista:
                         if conta._senha == senha:
-                            print(f'Saldo de R${conta.saldo} Cliente {conta.nome}\n')
+                            print(
+                                f'Saldo de R${conta.saldo} Cliente {conta.nome}\n')
                             print(conta_destino.saldo_cliente(
                                 conta.saldo_cliente))
                             conta.transferir(conta_destino, valor, senha)
-                            print(f'Saldo de R${conta.saldo} Cliente {conta.nome}\n')
+                            print(
+                                f'Saldo de R${conta.saldo} Cliente {conta.nome}\n')
                             print(conta_destino.saldo_cliente(
                                 conta.saldo_cliente))
+
 
 def main():
     utils = Utils()
@@ -47,5 +48,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
