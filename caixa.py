@@ -7,6 +7,7 @@ def main():
     caixa_eletronico = CaixaEletronico()
     utils.limpa_tela()
     itau = Banco()
+    # ===== DADOS MOCADOS SO PARA TESTE ==========
     # cadastra o cliente
     c1 = Client('Marcelo Antonio', '@tecno')
     c2 = Client('Luiza Adriana', '@trancas')
